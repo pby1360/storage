@@ -28,7 +28,7 @@ const Login = () => {
     <div className={styles}>
       <form onSubmit={login} className="login-container">
         <section className="login-box">
-          <p>BIZ-PLUS 로그인</p>
+          <p>로그인</p>
           <TextField id="id" variant="outlined" placeholder="ID" size="small" />
           <TextField id="pw" variant="outlined" placeholder="PassWord" size="small" type="password" />
           <Button type="submit" className="login-button" variant="contained" size="large">로그인</Button>

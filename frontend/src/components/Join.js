@@ -42,7 +42,7 @@ const Join = () => {
     <div>
       <section className='join-container'>
         <form onSubmit={join} className='join-form'>
-          <p className='join-title'>BIZ-PLUS 회원가입</p>
+          <p className='join-title'>회원가입</p>
           <article className='join-input'>
             <InputLabel>아이디</InputLabel>
             <TextField id='userId' className='join-input-field' variant='outlined' size='small' required />
