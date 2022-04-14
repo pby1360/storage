@@ -4,9 +4,9 @@
 
 .navigation-bar {
   font-family: "Nanum Gothic", sans-serif;
-  height: 5rem;
+  height: 3.5rem;
   display: flex;
-  // z-index: 20000;
+  background-color: #1976d2;
 
   .navigation-logo {
     flex: 2;
@@ -17,7 +17,7 @@
     a {
       font-size: 1.75rem;
       font-family: "Roboto", sans-serif;
-      color: #1976d2;
+      color: #fff;
     }
 
     a:hover {
@@ -55,9 +55,9 @@
       }
 
       li:hover {
-        color: #333;
+        color: #fff;
         font-weight: bold;
-        text-shadow: 0px 0px 0px #c8c8c8;
+        text-shadow: 0px 0px 0px #333;
         cursor: pointer;
       }
 
@@ -67,7 +67,7 @@
       }
 
       li a:active {
-        color: red;
+        // color: red;
       }
 
       // li a.arrow {

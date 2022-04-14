@@ -1,12 +1,13 @@
 import React from 'react';
 import "styles/pages/Workout.scss";
-import Timer from "components/controls/Timer.js";
+import Stopwatch from "components/controls/Stopwatch.js";
 
 const Workout = () => {
   
   return (
     <div className="workout-container">
-      <Timer />
+      <Stopwatch />
+      <Stopwatch />
     </div>
   );
 };
