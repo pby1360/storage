@@ -1,7 +1,7 @@
 import useInterval from 'components/UseInterval';
 import React, { useState } from 'react';
 // import useInterval from 'components/UseInterval';
-import "styles/components/controls/Timer.scss";
+import "styles/components/controls/Stopwatch.scss";
 
 const Stopwatch = () => {
 
@@ -27,11 +27,11 @@ const Stopwatch = () => {
   
 
   return (
-    <section className="timer-container">
-      <article className="timer-header">
-        타이머
+    <section className="stopwatch-container">
+      <article className="stopwatch-header">
+        스톱워치
       </article>
-      <article className="timer-body">
+      <article className="stopwatch-body">
         <section>
           <article>
             {time}
@@ -43,8 +43,7 @@ const Stopwatch = () => {
           </article>
         </section>
       </article>
-      <article className="timer-footer">
-        푸터
+      <article className="stopwatch-footer">
       </article>
     </section>
   );
