@@ -2,3 +2,12 @@
   // background-color: #7f61f2;
   height: 100vh;
 }
+
+.control-button-wrapper {
+  display: flex;
+  justify-content: space-between
+}
+button.small {
+  height: 1.5rem;
+  min-width: 2.5rem;
+}

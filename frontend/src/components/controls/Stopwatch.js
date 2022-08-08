@@ -24,6 +24,10 @@ const Stopwatch = () => {
     setActive(false);
     setTime(0);
   }
+
+  const getTime = () => {
+    return new Date(time * 1000).toISOString().substring(11, 19);
+  }
   
 
   return (
@@ -34,12 +38,12 @@ const Stopwatch = () => {
       <article className="stopwatch-body">
         <section>
           <article>
-            {time}
+            {getTime()}
           </article>
-          <article>
-            <button onClick={start}>시작</button>
-            <button onClick={stop}>정지</button>
-            <button onClick={reset}>리셋</button>
+          <article className='control-button-wrapper'>
+            <button className='small' onClick={start}>시작</button>
+            <button className='small' onClick={stop}>정지</button>
+            <button className='small' onClick={reset}>리셋</button>
           </article>
         </section>
       </article>
