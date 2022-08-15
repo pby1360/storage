@@ -1,0 +1,48 @@
+.counter-container {
+  min-width: 7.5rem;
+  overflow: auto;
+  display: flex;
+  flex-flow: column;
+
+  .counter-header {
+    display: flex;
+    justify-content: space-between;
+
+    input {
+      min-width: 4.5rem;
+    }
+    span {
+      margin-right: 0.5rem;
+    }
+  }
+  .counter-body {
+    flex: 1;
+
+    .counter-body-count {
+      margin: 0.5rem 0;
+
+      .counter-body-column {
+        display: flex;
+  
+        span {
+          text-align: center;
+          flex: 1
+        }
+      }
+  
+      .counter-body-number {
+        display: flex;
+        
+        span {
+          text-align: center;
+          flex: 1
+        }
+      }
+
+    }    
+  }
+  .counter-footer {
+    // background-color: #f8f8f8;
+    // border-top: solid 1px #a8a8a8;
+  }
+}

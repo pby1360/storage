@@ -1,8 +1,5 @@
 .stopwatch-container {
   min-width: 7.5rem;
-  // border-radius: 7px;
-  // border: solid 1px #a8a8a8;
-  // resize: both;
   overflow: auto;
   display: flex;
   flex-flow: column;
@@ -13,8 +10,9 @@
     // background-color: #f8f8f8;
     // border-bottom: solid 1px #a8a8a8;
   }
-  .stopwatch-body {
+  .stopwatch-body-time {
     flex: 1;
+    margin: 0.5rem 0;
   }
   .stopwatch-footer {
     // background-color: #f8f8f8;

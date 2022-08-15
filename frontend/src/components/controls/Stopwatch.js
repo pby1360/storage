@@ -37,7 +37,7 @@ const Stopwatch = () => {
       </article>
       <article className="stopwatch-body">
         <section>
-          <article>
+          <article className='stopwatch-body-time'>
             {getTime()}
           </article>
           <article className='control-button-wrapper'>

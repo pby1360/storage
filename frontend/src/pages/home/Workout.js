@@ -4,11 +4,12 @@ import "styles/pages/Workout.scss";
 // import Controls from 'components/controls/Controls';
 import Stopwatch from "components/controls/Stopwatch.js";
 import Counter from "components/controls/Counter.js";
+import SetCounter from "components/controls/SetCounter.js";
 
 const Workout = () => {
 
   const [space, setSpace] = useState([]);
-  const controls = [ Stopwatch, Counter ];
+  const controls = [ Stopwatch, Counter, SetCounter ];
 
   const addControl = (name) => {
 
@@ -17,17 +18,13 @@ const Workout = () => {
       component = <Stopwatch name='Stopwatch' />;
     } else if (name === 'Counter') {
       component = <Counter name='Counter' />;
+    } else if (name === 'SetCounter') {
+      component = <SetCounter name='Set Counter' />;
     }
     
     setSpace([ ...space, component ]);
   }
 
-  // const addTimer = () => {
-  //   console.log("addTimer");
-  // }
-  // const addCounter = () => {
-  //   setSpace([ ...space, <Counter />]);
-  // }
   const removeControl = (index) => {
     space.splice(index, 1);
     setSpace([ ...space ]);
