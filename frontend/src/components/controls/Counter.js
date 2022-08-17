@@ -5,7 +5,7 @@ import "styles/components/controls/Counter.scss";
 const Counter = () => {
 
   const [count, setCount] = useState(0);
-  const [name, setName] = useState('이름없음');
+  const [name, setName] = useState('N/A');
   const [isEdit, setEdit] = useState(false);
 
   const plus = () => {

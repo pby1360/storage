@@ -7,7 +7,7 @@ const SetCounter = () => {
   const [count, setCount] = useState(0);
   const [set, setSet] = useState(0);
   const [total, setTotal] = useState(0);
-  const [name, setName] = useState('이름없음');
+  const [name, setName] = useState('N/A');
   const [isEdit, setEdit] = useState(false);
 
   const plus = () => {

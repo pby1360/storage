@@ -1,12 +1,13 @@
 import useInterval from 'components/UseInterval';
 import React, { useState } from 'react';
-// import useInterval from 'components/UseInterval';
 import "styles/components/controls/Stopwatch.scss";
 
 const Stopwatch = () => {
 
   const [time, setTime] = useState(0);
   const [isActive, setActive] = useState(false);
+  const [name, setName] = useState('N/A');
+  const [isEdit, setEdit] = useState(false);
 
   useInterval(() => {
     setTime(time + 1);
@@ -25,6 +26,18 @@ const Stopwatch = () => {
     setTime(0);
   }
 
+  const editName = () => {
+    setEdit(true);
+  }
+
+  const saveName = () => {
+    setEdit(false);
+  }
+
+  const changeName = (e) => {
+    setName(e.target.value);
+  }
+
   const getTime = () => {
     return new Date(time * 1000).toISOString().substring(11, 19);
   }
@@ -33,7 +46,8 @@ const Stopwatch = () => {
   return (
     <section className="stopwatch-container">
       <article className="stopwatch-header">
-        스톱워치
+        {isEdit ? <input id="name" value={name} onChange={changeName}></input> : <span>{name}</span>}
+        {isEdit ? <button onClick={() => saveName()}>저장</button> : <button onClick={() => editName()}>편집</button>}
       </article>
       <article className="stopwatch-body">
         <section>
