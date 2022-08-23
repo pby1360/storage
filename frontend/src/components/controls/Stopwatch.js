@@ -8,10 +8,17 @@ const Stopwatch = () => {
   const [isActive, setActive] = useState(false);
   const [name, setName] = useState('N/A');
   const [isEdit, setEdit] = useState(false);
+  
 
   useInterval(() => {
     setTime(time + 1);
   }, isActive ? 1000 : null);
+
+  const onKeyUp = (e) => {
+    if (e.key === 'Enter') {
+      saveName();
+    }
+  }
 
   const start = () => {
     setActive(true);
@@ -46,7 +53,7 @@ const Stopwatch = () => {
   return (
     <section className="stopwatch-container">
       <article className="stopwatch-header">
-        {isEdit ? <input id="name" value={name} onChange={changeName}></input> : <span>{name}</span>}
+        {isEdit ? <input id="name" value={name} onKeyUp={onKeyUp} onChange={changeName}></input> : <span>{name}</span>}
         {isEdit ? <button onClick={() => saveName()}>저장</button> : <button onClick={() => editName()}>편집</button>}
       </article>
       <article className="stopwatch-body">

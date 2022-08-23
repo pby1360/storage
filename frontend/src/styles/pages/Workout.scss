@@ -1,27 +1,40 @@
 .workout-container {
   // padding: 1rem;
-  .workout-controls {
-    // width: 100%;
-    background-color: #f8f8f8;
-    padding: 0.25rem;
+  .workout-pannel {
 
-    display: flex;
+  
+    .workout-controls {
+      // width: 100%;
+      background-color: #f8f8f8;
+      padding: 0.25rem;
 
-    .workout-control {
-      height: 4rem;
-      width: 5rem;
-      border:solid 1px #a8a8a8;
-      margin-left: 0.25rem;
+      display: flex;
 
-      button {
-        background-color: #fff;
-        border: none;
-        width: 100%;
-        height: 100%;
-        cursor: pointer;
+      .workout-control {
+        height: 4rem;
+        width: 5rem;
+        border:solid 1px #a8a8a8;
+        margin-left: 0.25rem;
+
+        button {
+          background-color: #fff;
+          border: none;
+          width: 100%;
+          height: 100%;
+          cursor: pointer;
+        }
+        button:hover {
+          background-color: #f8f8f8;
+        }
       }
-      button:hover {
-        background-color: #f8f8f8;
+    }
+    .workout-buttons {
+      background-color: #ccc;
+      padding: 0.5rem;
+      
+      button {
+        padding: 0.5rem;
+        margin-right: 0.1rem;
       }
     }
   }

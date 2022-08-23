@@ -8,6 +8,12 @@ const Counter = () => {
   const [name, setName] = useState('N/A');
   const [isEdit, setEdit] = useState(false);
 
+  const onKeyUp = (e) => {
+    if (e.key === 'Enter') {
+      saveName();
+    }
+  }
+
   const plus = () => {
     setCount(count + 1);
   }
@@ -35,7 +41,7 @@ const Counter = () => {
   return (
     <section className="counter-container">
       <article className="counter-header">
-        {isEdit ? <input id="name" value={name} onChange={changeName}></input> : <span>{name}</span>}
+        {isEdit ? <input id="name" value={name} onKeyUp={onKeyUp} onChange={changeName}></input> : <span>{name}</span>}
         {isEdit ? <button onClick={() => saveName()}>저장</button> : <button onClick={() => editName()}>편집</button>}
       </article>
       <article className="counter-body">
